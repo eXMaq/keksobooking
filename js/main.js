@@ -14,6 +14,7 @@ setOnMapLoad(() => {
   turnFormOn();
   getData((data) => {
     createOfferMarkers(data.slice(0, RENTAL_OBJECTS));
+    turnOnFilters();
   },
   (error) => {
     showAlert(error.message);
@@ -22,4 +23,3 @@ setOnMapLoad(() => {
 
 renderMap();
 setUserFormSubmit(showErrorMessage);
-turnOnFilters();
